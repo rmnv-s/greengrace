@@ -1,0 +1,23 @@
+@use "fonts";
+@use "color" as *;
+* {
+  // box-sizing: border-box;
+  &,
+  &::after,
+  &::before {
+    box-sizing: inherit;
+  }
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+  scroll-behavior: smooth;
+}
+
+.root {
+  font-family: "Montserrat", sans-serif;
+  background-color: $color-light-gray;
+}

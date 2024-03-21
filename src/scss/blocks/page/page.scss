@@ -1,0 +1,11 @@
+@use "helpers/color" as *;
+
+.page {
+  height: 50vh;
+
+  &__wrapper {
+    max-width: 1408px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+}
