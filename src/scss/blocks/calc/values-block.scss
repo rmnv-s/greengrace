@@ -1,0 +1,78 @@
+@use "helpers/color" as *;
+
+.values-block {
+  padding: 3.2rem;
+  background-color: $color-white;
+  border-radius: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__button {
+  }
+
+  &__note {
+    color: $color-text-hover;
+    text-align: center;
+  }
+}
+
+.count {
+  margin-bottom: 3.2rem;
+
+  &__summary {
+    display: flex;
+    list-style-type: none;
+    text-align: center;
+
+    & :first-child {
+      margin-right: 1.6rem;
+    }
+
+    & :last-child {
+      margin-left: 1.6rem;
+    }
+
+    & :nth-child(2) {
+      margin: 0 1.6rem;
+    }
+
+    & :nth-child(3) {
+      margin: 0 1.6rem;
+    }
+
+    & :not(:last-child) {
+      position: relative;
+      // background-color: tomato;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0rem;
+        right: -1.6rem;
+        width: 0.2rem;
+        height: 100%;
+        background-color: $color-main;
+        border-radius: 0.2rem;
+      }
+    }
+  }
+
+  &__item {
+    min-width: 19.5rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 500;
+    color: $color-text;
+    padding: 1.4rem 0;
+  }
+
+  &__value {
+    display: block;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    font-weight: 700;
+    color: $color-main;
+    margin-top: 0.8rem;
+  }
+}

@@ -69,11 +69,11 @@
           <h2 class="first-display__subheading">
             Каждый из нас понимает очевидную вещь: реализация намеченных
           </h2>
-          <div class="actions">
-            <a class="actions__button actions-link" href="#">Button</a>
-            <a class="actions__link actions-link" href="#">About</a>
+          <div class="first-display__actions">
+            <a class="button button-link" href="#">Button</a>
+            <a class="first-display__actions-link" href="#">About</a>
           </div>
-          <p class="note">Сноска</p>
+          <p class="note first-display__note">Сноска</p>
         </div>
       </section>
 
@@ -129,6 +129,106 @@
               </p>
             </div>
           </div>
+        </section>
+        <!--  -->
+
+        <!-- WIDGET CALC -->
+        <section class="calc widget">
+          <h2 class="widget__heding calc__heading">Заголовок виджета</h2>
+          <!--  -->
+          <div class="calc__about">
+            <img
+              class="calc__about-logo"
+              src="./img/calc-logo.svg"
+              alt="лого"
+              title="лого"
+            />
+            <p class="calc__about-text">
+              Каждый из нас понимает очевидную вещь: реализация намеченных
+              плановых заданий говорит о возможностях благоприятных перспектив!
+            </p>
+            <a class="calc__about-link" href="#">Linked button</a>
+
+            <img
+              class="calc__about-img"
+              src="./img/calc-image.png"
+              alt="картика"
+            />
+          </div>
+          <!--  -->
+          <div class="calculator-block">
+            <!--  -->
+            <fieldset class="calculator-section">
+              <div class="subheding">Подзаголовок</div>
+              <div class="input-container">
+                <label for="sum-input"> Summ </label>
+                <input
+                  type="number"
+                  id="sum-input"
+                  class="sum-input input"
+                  placeholder="100"
+                />
+              </div>
+
+              <ul class="tab-container">
+                <li class="tab-container__item" data-value="100">100</li>
+                <li class="tab-container__item" data-value="500">500</li>
+                <li class="tab-container__item" data-value="1000">1000</li>
+                <li class="tab-container__item" data-value="5000">5000</li>
+                <li class="tab-container__item" data-value="10000">10000</li>
+              </ul>
+              <!--  -->
+              <div class="input-container input-container__range">
+                <label for="month-input"> Interval </label>
+                <input
+                  type="number"
+                  class="month-input input"
+                  placeholder="12 месяцев"
+                  min="3"
+                  max="18"
+                  step="3"
+                />
+                <input
+                  type="range"
+                  class="slider-input"
+                  min="3"
+                  max="18"
+                  step="3"
+                />
+              </div>
+            </fieldset>
+            <!--  -->
+            <div class="values-block">
+              <div class="subheding">Подзаголовок</div>
+
+              <div class="count">
+                <ul class="count__summary">
+                  <li class="count__item">
+                    Summ
+                    <span class="count__value">100</span>
+                  </li>
+                  <li class="count__item">
+                    Percent
+                    <span class="count__value">15%</span>
+                  </li>
+                  <li class="count__item">
+                    Additional
+                    <span class="count__value">+20%</span>
+                  </li>
+                  <li class="count__item">
+                    Result
+                    <span class="count__value">138</span>
+                  </li>
+                </ul>
+              </div>
+
+              <a class="button button-link values-block__button" href="#"
+                >Button</a
+              >
+              <p class="note values-block__note">Сноска</p>
+            </div>
+          </div>
+          <!--  -->
         </section>
         <!--  -->
       </main>

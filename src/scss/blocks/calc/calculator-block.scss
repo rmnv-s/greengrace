@@ -1,0 +1,145 @@
+@use "helpers/color" as *;
+
+.calculator-block {
+  outline: 1px solid tomato;
+  display: flex;
+  justify-content: space-between;
+  gap: 3.2rem;
+}
+
+.calculator-section {
+  background-color: $color-white;
+  padding: 3.2rem;
+  border-radius: 3.2rem;
+  width: 44.8rem;
+}
+
+.subheding {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  color: $color-text;
+  margin-bottom: 3.2rem;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__range {
+  }
+}
+
+.sum-input {
+  margin-bottom: 1.6rem;
+}
+
+.input {
+  border: 0.2rem solid $color-second;
+  border-radius: 0.8rem;
+  padding: 2.4rem 1.6rem 0.8rem 1.6rem;
+  color: $color-text;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+.input-container label {
+  position: absolute;
+  top: 0.8rem;
+  left: 1.6rem;
+  pointer-events: none; /* чтобы метка не перехватывала события мыши */
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  font-weight: 500;
+  color: $color-text-hover;
+}
+
+.tab-container {
+  display: flex;
+  margin-bottom: 1.6rem;
+
+  &__item {
+    list-style-type: none;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-weight: 500;
+    padding: 0.8rem 1.6rem;
+    background-color: $color-light-gray;
+    border-radius: 2.6rem;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 0.8rem;
+    }
+  }
+}
+
+.month-input {
+  margin-bottom: 1.6rem;
+}
+
+//
+.slider-input {
+  -webkit-appearance: none; /* Убираем стандартный стиль в Chrome и Safari */
+  width: 100%; /* Ширина ползунка */
+  height: 0.2rem; /* Высота ползунка */
+  background: $color-main; /* Цвет фона ползунка */
+  outline: none; /* Убираем контур */
+  -webkit-transition: 0.2s; /* Плавный переход в Chrome и Safari */
+  transition: opacity 0.2s; /* Плавный переход в других браузерах */
+  border-radius: 0.5rem; /* Скругляем углы */
+}
+
+/* Изменяем цвет ползунка при его активации */
+.slider-input::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Убираем стандартный стиль в Chrome и Safari */
+  width: 1.6rem; /* Ширина "бегунка" */
+  height: 1.6rem; /* Высота "бегунка" */
+  background: $color-main; /* Цвет "бегунка" */
+  cursor: pointer; /* Изменяем курсор при наведении на "бегунок" */
+  border-radius: 50%; /* Делаем "бегунок" круглым */
+}
+
+/* Изменяем цвет ползунка при его активации в Firefox */
+.slider-input::-moz-range-thumb {
+  width: 1.6rem; /* Ширина "бегунка" */
+  height: 1.6rem; /* Высота "бегунка" */
+  // background: $color-main;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+fieldset,
+input {
+  border: none;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit/Blink browsers */
+  color: $color-text;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: $color-text;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: $color-text;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: $color-text;
+}
+
+/* Убираем стандартные стрелки у input типа number */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* Может потребоваться изменить, в зависимости от требуемого отступа */
+}
+input[type="number"] {
+  -moz-appearance: textfield; /* Для Firefox */
+}
