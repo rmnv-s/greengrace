@@ -309,7 +309,7 @@ html {
 }
 
 .page__wrapper {
-  max-width: 1408px;
+  max-width: 1448px;
   margin: 0 auto;
   padding: 0 2rem;
   outline: 1px solid tomato;
@@ -317,7 +317,7 @@ html {
 
 .header {
   position: absolute;
-  width: 1368px;
+  width: 1408px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
