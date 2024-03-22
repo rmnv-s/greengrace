@@ -1,0 +1,52 @@
+@use "helpers/color" as *;
+
+.header {
+  position: absolute;
+  width: 1368px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(2, 255, 73, 0.5);
+  padding: 1.6rem 3.2rem;
+  z-index: 1;
+
+  &__logo {
+    margin-right: 3.2rem;
+  }
+
+  &__nav {
+    flex: 1 1 auto;
+
+    &-list {
+      list-style-type: none;
+    }
+
+    &-item {
+      display: inline-block;
+      & :not(last-child) {
+        margin-right: 1.6rem;
+      }
+    }
+
+    &-link {
+      font-size: 1.6rem;
+      line-height: 2rem;
+      font-weight: 500;
+      color: $color-white;
+      text-decoration: none;
+    }
+  }
+
+  &__login {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: $color-white;
+    text-decoration: none;
+
+    & svg {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 0.8rem;
+    }
+  }
+}
