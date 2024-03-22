@@ -70,19 +70,14 @@ function images() {
 
 function source() {
   return src(
-    [
-      "src/css/style.css",
-      "src/fonts/**/*",
-      "src/js/script.min.js",
-      "src/*html",
-    ],
+    ["src/css/style.css", "src/fonts/**/*", "src/js/script.js", "src/*html"],
     { base: "src" }
   ).pipe(dest("build"));
 }
 
 function watching() {
   watch(["src/scss/**/*.scss"], styles);
-  watch(["src/js/**/*.js", "!src/js/script.min.js"], scripts);
+  watch(["src/js/**/*.js", "!src/js/script.js"], scripts);
   watch(["src/*.html"]).on("change", browserSync.reload);
 }
 
