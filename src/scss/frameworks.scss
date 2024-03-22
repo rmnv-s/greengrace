@@ -6,5 +6,10 @@
 @forward "helpers/mixin";
 
 @forward "blocks/page/page.scss";
+
 @forward "blocks/header/header.scss";
 @forward "blocks/first-display/first-display.scss";
+@forward "blocks/benefits/benefits.scss";
+
+// Компоненты для страницы ↓ — ЗАГОЛОВКИ блоков
+@forward "blocks/widget/widget.scss";

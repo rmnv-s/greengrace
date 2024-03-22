@@ -1,0 +1,13 @@
+@use "helpers/color" as *;
+
+.widget {
+  // outline: 1px solid green;
+  padding: 3.2rem 0;
+  &__heding {
+    font-size: 2.8rem;
+    line-height: 3.4rem;
+    font-weight: 800;
+    text-align: center;
+    color: $color-text;
+  }
+}

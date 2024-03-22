@@ -312,12 +312,11 @@ html {
   max-width: 1448px;
   margin: 0 auto;
   padding: 0 2rem;
-  outline: 1px solid tomato;
 }
 
 .header {
   position: absolute;
-  width: 1408px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -452,4 +451,68 @@ html {
   font-size: 1.2rem;
   line-height: 1.4rem;
   margin-top: 1.6rem;
+}
+
+.benefits__heading {
+  margin-bottom: 1.6rem;
+}
+.benefits__list {
+  list-style-type: none;
+  text-align: center;
+}
+.benefits__list-item {
+  display: inline-block;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 3.2rem;
+}
+.benefits__list-item:not(:last-child) {
+  margin-right: 1.6rem;
+}
+.benefits__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3.2rem;
+}
+
+.card {
+  padding: 3.2rem;
+  border-radius: 3.2rem;
+  background-color: #ffffff;
+}
+.card__icon {
+  margin-bottom: 3.2rem;
+}
+.card__heding {
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  font-weight: 700;
+  color: #02ff49;
+  margin-bottom: 1.6rem;
+}
+.card__text {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 500;
+  color: #000000;
+  max-width: 38.4rem;
+}
+
+.widget {
+  padding: 3.2rem 0;
+}
+.widget__heding {
+  font-size: 2.8rem;
+  line-height: 3.4rem;
+  font-weight: 800;
+  text-align: center;
+  color: #000000;
 }
