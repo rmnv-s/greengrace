@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   /* 1 */
@@ -413,28 +414,19 @@ html {
   color: #ffffff;
   margin-bottom: 3.2rem;
 }
-
-.actions {
+.first-display__actions {
   padding: 1.6rem 0;
 }
-.actions-link {
+.first-display__actions-link {
+  position: relative;
   text-decoration: none;
   color: #ffffff;
   font-size: 1.6rem;
   line-height: 2rem;
   font-weight: 700;
+  margin-left: 1.6rem;
 }
-.actions__button {
-  text-transform: uppercase;
-  background-color: #00d8d8;
-  padding: 1.6rem 3.2rem;
-  border-radius: 2.6rem;
-  margin-right: 1.6rem;
-}
-.actions__link {
-  position: relative;
-}
-.actions__link::before {
+.first-display__actions-link::before {
   content: "";
   position: absolute;
   top: 0.2rem;
@@ -445,12 +437,8 @@ html {
   background-repeat: no-repeat;
   background-position: center center;
 }
-
-.note {
+.first-display__note {
   color: #ffffff;
-  font-size: 1.2rem;
-  line-height: 1.4rem;
-  margin-top: 1.6rem;
 }
 
 .benefits__heading {
@@ -504,6 +492,307 @@ html {
   font-weight: 500;
   color: #000000;
   max-width: 38.4rem;
+}
+
+.calc__heading {
+  margin-bottom: 3.2rem;
+}
+.calc__about {
+  position: relative;
+  border-radius: 32px;
+  background: -webkit-gradient(linear, left top, right top, from(#00d8d8), to(#02ff49));
+  background: -o-linear-gradient(left, #00d8d8 0%, #02ff49 100%);
+  background: linear-gradient(90deg, #00d8d8 0%, #02ff49 100%);
+  padding: 3.2rem;
+  margin-bottom: 3.2rem;
+}
+.calc__about-logo {
+  margin-bottom: 3.2rem;
+}
+.calc__about-text {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 3.2rem;
+  max-width: 47.2rem;
+}
+.calc__about-link {
+  position: relative;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+}
+.calc__about-link::before {
+  content: "";
+  position: absolute;
+  top: 0.2rem;
+  right: -1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("../img/calc-about-arrow-right.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.calc__about-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.calculator-block {
+  outline: 1px solid tomato;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 3.2rem;
+}
+
+.calculator-section {
+  background-color: #ffffff;
+  padding: 3.2rem;
+  border-radius: 3.2rem;
+  width: 44.8rem;
+}
+
+.subheding {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 3.2rem;
+}
+
+.input-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.sum-input {
+  margin-bottom: 1.6rem;
+}
+
+.input {
+  border: 0.2rem solid #02ff49;
+  border-radius: 0.8rem;
+  padding: 2.4rem 1.6rem 0.8rem 1.6rem;
+  color: #000000;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+.input-container label {
+  position: absolute;
+  top: 0.8rem;
+  left: 1.6rem;
+  pointer-events: none;
+  /* чтобы метка не перехватывала события мыши */
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  font-weight: 500;
+  color: #575757;
+}
+
+.tab-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1.6rem;
+}
+.tab-container__item {
+  list-style-type: none;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  font-weight: 500;
+  padding: 0.8rem 1.6rem;
+  background-color: #f5f5f7;
+  border-radius: 2.6rem;
+  cursor: pointer;
+}
+.tab-container__item:not(:last-child) {
+  margin-right: 0.8rem;
+}
+
+.month-input {
+  margin-bottom: 1.6rem;
+}
+
+.slider-input {
+  -webkit-appearance: none;
+  /* Убираем стандартный стиль в Chrome и Safari */
+  width: 100%;
+  /* Ширина ползунка */
+  height: 0.2rem;
+  /* Высота ползунка */
+  background: #00d8d8;
+  /* Цвет фона ползунка */
+  outline: none;
+  /* Убираем контур */
+  -webkit-transition: 0.2s;
+  /* Плавный переход в Chrome и Safari */
+  -webkit-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  /* Плавный переход в других браузерах */
+  border-radius: 0.5rem;
+  /* Скругляем углы */
+}
+
+/* Изменяем цвет ползунка при его активации */
+.slider-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Убираем стандартный стиль в Chrome и Safari */
+  width: 1.6rem;
+  /* Ширина "бегунка" */
+  height: 1.6rem;
+  /* Высота "бегунка" */
+  background: #00d8d8;
+  /* Цвет "бегунка" */
+  cursor: pointer;
+  /* Изменяем курсор при наведении на "бегунок" */
+  border-radius: 50%;
+  /* Делаем "бегунок" круглым */
+}
+
+/* Изменяем цвет ползунка при его активации в Firefox */
+.slider-input::-moz-range-thumb {
+  width: 1.6rem;
+  /* Ширина "бегунка" */
+  height: 1.6rem;
+  /* Высота "бегунка" */
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+fieldset,
+input {
+  border: none;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit/Blink browsers */
+  color: #000000;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #000000;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #000000;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #000000;
+}
+
+/* Убираем стандартные стрелки у input типа number */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  /* Может потребоваться изменить, в зависимости от требуемого отступа */
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Для Firefox */
+}
+
+.values-block {
+  padding: 3.2rem;
+  background-color: #ffffff;
+  border-radius: 3.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.values-block__note {
+  color: #575757;
+  text-align: center;
+}
+
+.count {
+  outline: 1px solid green;
+  margin-bottom: 3.2rem;
+}
+.count__summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  text-align: center;
+}
+.count__summary :first-child {
+  margin-right: 1.6rem;
+}
+.count__summary :last-child {
+  margin-left: 1.6rem;
+}
+.count__summary :nth-child(2) {
+  margin: 0 1.6rem;
+}
+.count__summary :nth-child(3) {
+  margin: 0 1.6rem;
+}
+.count__item {
+  min-width: 19.5rem;
+  outline: 1px solid blue;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 500;
+  color: #000000;
+  padding: 1.4rem 0;
+}
+.count__value {
+  display: block;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  font-weight: 700;
+  color: #00d8d8;
+  margin-top: 0.8rem;
+}
+
+.button {
+  text-transform: uppercase;
+  background-color: #00d8d8;
+  padding: 1.6rem 3.2rem;
+  border-radius: 2.6rem;
+}
+.button-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+.note {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  margin-top: 1.6rem;
 }
 
 .widget {

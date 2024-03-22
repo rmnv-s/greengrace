@@ -11,5 +11,12 @@
 @forward "blocks/first-display/first-display.scss";
 @forward "blocks/benefits/benefits.scss";
 
+@forward "blocks/calc/calc.scss";
+@forward "blocks/calc/calculator-block.scss";
+@forward "blocks/calc/values-block.scss";
+
 // Компоненты для страницы ↓ — ЗАГОЛОВКИ блоков
+@forward "blocks/components/buttons.scss";
+@forward "blocks/components/note.scss";
+//
 @forward "blocks/widget/widget.scss";

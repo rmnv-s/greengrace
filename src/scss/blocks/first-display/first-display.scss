@@ -48,47 +48,34 @@
     color: $color-white;
     margin-bottom: 3.2rem;
   }
-}
 
-.actions {
-  // outline: 1px solid red;
-  padding: 1.6rem 0;
-  &-link {
-    text-decoration: none;
-    color: $color-white;
-    font-size: 1.6rem;
-    line-height: 2rem;
-    font-weight: 700;
-  }
+  &__actions {
+    padding: 1.6rem 0;
 
-  &__button {
-    text-transform: uppercase;
-    background-color: $color-main;
-    padding: 1.6rem 3.2rem;
-    border-radius: 2.6rem;
-    margin-right: 1.6rem;
-  }
+    &-link {
+      position: relative;
+      text-decoration: none;
+      color: $color-white;
+      font-size: 1.6rem;
+      line-height: 2rem;
+      font-weight: 700;
+      margin-left: 1.6rem;
 
-  &__link {
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0.2rem;
-      right: -1.5rem;
-      width: 1.5rem;
-      height: 1.5rem;
-      background-image: url("../img/first-display-arrow-right.svg");
-      background-repeat: no-repeat;
-      background-position: center center;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0.2rem;
+        right: -1.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-image: url("../img/first-display-arrow-right.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
     }
   }
-}
 
-.note {
-  color: $color-white;
-  font-size: 1.2rem;
-  line-height: 1.4rem;
-  margin-top: 1.6rem;
+  &__note {
+    color: $color-white;
+  }
 }
