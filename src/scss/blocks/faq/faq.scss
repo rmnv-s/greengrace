@@ -1,0 +1,28 @@
+@use "helpers/color" as *;
+@use "helpers/text" as *;
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3.2rem;
+
+    & :not(:last-child) {
+      margin-right: 3.2rem;
+    }
+
+    &-item {
+      @include heading-h4;
+      color: $color-learn;
+      background-color: $color-white;
+      padding: 2.4rem 3.2rem;
+      border-radius: 1.6rem;
+    }
+  }
+}
