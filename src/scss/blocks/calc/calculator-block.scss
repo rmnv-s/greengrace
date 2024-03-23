@@ -1,7 +1,8 @@
 @use "helpers/color" as *;
+@use "helpers/text" as *;
 
 .calculator-block {
-  outline: 1px solid tomato;
+  // outline: 1px solid tomato;
   display: flex;
   justify-content: space-between;
   gap: 3.2rem;
@@ -15,9 +16,7 @@
 }
 
 .subheding {
-  font-size: 2rem;
-  line-height: 2.4rem;
-  font-weight: 700;
+  @include heading-h4;
   text-align: center;
   color: $color-text;
   margin-bottom: 3.2rem;
@@ -41,9 +40,7 @@
   border-radius: 0.8rem;
   padding: 2.4rem 1.6rem 0.8rem 1.6rem;
   color: $color-text;
-  font-size: 1.6rem;
-  line-height: 2rem;
-  font-weight: 500;
+  @include body-copy;
 }
 
 .input-container label {
@@ -51,9 +48,7 @@
   top: 0.8rem;
   left: 1.6rem;
   pointer-events: none; /* чтобы метка не перехватывала события мыши */
-  font-size: 1.2rem;
-  line-height: 1.4rem;
-  font-weight: 500;
+  @include body-small;
   color: $color-text-hover;
 }
 
@@ -63,9 +58,8 @@
 
   &__item {
     list-style-type: none;
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-    font-weight: 500;
+    @include body-small;
+
     padding: 0.8rem 1.6rem;
     background-color: $color-light-gray;
     border-radius: 2.6rem;

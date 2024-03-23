@@ -1,4 +1,5 @@
 @use "helpers/color" as *;
+@use "helpers/text" as *;
 
 .values-block {
   padding: 3.2rem;
@@ -60,9 +61,7 @@
 
   &__item {
     min-width: 19.5rem;
-    font-size: 1.6rem;
-    line-height: 2rem;
-    font-weight: 500;
+    @include body-copy;
     color: $color-text;
     padding: 1.4rem 0;
   }

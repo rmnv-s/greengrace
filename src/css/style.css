@@ -543,7 +543,6 @@ html {
 }
 
 .calculator-block {
-  outline: 1px solid tomato;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -786,6 +785,21 @@ input[type=number] {
   margin-top: 0.8rem;
 }
 
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 .info__heading {
   margin-bottom: 1.6rem;
 }
@@ -804,6 +818,7 @@ input[type=number] {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 4.8rem;
 }
 .info__card {
   position: relative;
@@ -824,6 +839,9 @@ input[type=number] {
   padding: 4.8rem 3.2rem 3.2rem;
   -webkit-box-shadow: 0px 8px 0px 0px rgba(169, 150, 235, 0.15);
           box-shadow: 0px 8px 0px 0px rgba(169, 150, 235, 0.15);
+}
+.info__card:nth-child(n+4) {
+  margin-bottom: 0;
 }
 .info__card-number {
   position: absolute;
@@ -866,6 +884,40 @@ input[type=number] {
   text-align: center;
 }
 
+.faq {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.faq__list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 3.2rem;
+}
+.faq__list :not(:last-child) {
+  margin-right: 3.2rem;
+}
+.faq__list-item {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  color: #009b19;
+  background-color: #ffffff;
+  padding: 2.4rem 3.2rem;
+  border-radius: 1.6rem;
+}
+
 .button {
   text-transform: uppercase;
   background-color: #00d8d8;
@@ -883,6 +935,7 @@ input[type=number] {
 .note {
   font-size: 1.2rem;
   line-height: 1.4rem;
+  font-weight: 500;
   margin-top: 1.6rem;
 }
 

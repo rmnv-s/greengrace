@@ -1,6 +1,11 @@
 @use "helpers/color" as *;
+@use "helpers/text" as *;
 
 .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   &__heading {
     margin-bottom: 1.6rem;
   }
@@ -19,6 +24,8 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+
+    margin-bottom: 4.8rem;
   }
 
   &__card {
@@ -33,6 +40,11 @@
     border-radius: 3.2rem;
     padding: 4.8rem 3.2rem 3.2rem;
     box-shadow: 0px 8px 0px 0px rgba(169, 150, 235, 0.15);
+
+    // убираем отступ снизу после последних 3х
+    &:nth-child(n + 4) {
+      margin-bottom: 0;
+    }
 
     &-number {
       position: absolute;
@@ -55,9 +67,7 @@
     }
 
     &-heding {
-      font-size: 2rem;
-      line-height: 2.4rem;
-      font-weight: 700;
+      @include heading-h4;
       color: $color-second;
       margin-bottom: 1.6rem;
     }
