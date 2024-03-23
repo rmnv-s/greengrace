@@ -8,12 +8,20 @@
 @forward "blocks/page/page.scss";
 
 @forward "blocks/header/header.scss";
+
+//WIDGET FIRST DISPLAY
 @forward "blocks/first-display/first-display.scss";
+
+//WIDGET FIRST BENEFITS
 @forward "blocks/benefits/benefits.scss";
 
+//WIDGET CALC
 @forward "blocks/calc/calc.scss";
 @forward "blocks/calc/calculator-block.scss";
 @forward "blocks/calc/values-block.scss";
+
+//WIDGET INFO
+@forward "blocks/info/info.scss";
 
 // Компоненты для страницы ↓ — ЗАГОЛОВКИ блоков
 @forward "blocks/components/buttons.scss";
