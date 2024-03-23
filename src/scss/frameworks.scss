@@ -4,6 +4,9 @@
 @forward "helpers/text";
 @forward "helpers/global";
 @forward "helpers/mixin";
+// Компоненты для страницы ↓ — ЗАГОЛОВКИ блоков
+@forward "blocks/components/buttons.scss";
+@forward "blocks/components/note.scss";
 
 @forward "blocks/page/page.scss";
 
@@ -26,8 +29,8 @@
 //WIDGET FAQ
 @forward "blocks/faq/faq.scss";
 
-// Компоненты для страницы ↓ — ЗАГОЛОВКИ блоков
-@forward "blocks/components/buttons.scss";
-@forward "blocks/components/note.scss";
+//WIDGET BLOG
+@forward "blocks/blog/blog.scss";
+
 //
 @forward "blocks/widget/widget.scss";
