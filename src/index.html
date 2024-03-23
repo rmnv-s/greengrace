@@ -320,13 +320,104 @@
         <!-- WIDGET BLOG -->
         <section class="blog widget">
           <h2 class="widget__heading calc__heading">Заголовок виджета</h2>
-          <div class="blog__post">
-            <!-- Первый подблок -->
-            <!-- Содержимое первого подблока -->
-          </div>
-          <div class="blog__post">
-            <!-- Второй подблок -->
-            <!-- Содержимое второго подблока -->
+          <div class="blog__container">
+            <div class="blog__post">
+              <div class="news">
+                <img
+                  class="news__image"
+                  src="./img/news-image.png"
+                  alt="картинка новости"
+                />
+                <span class="news__tag">Tab Item</span>
+
+                <div class="news__content">
+                  <a class="news__content-logo" href="#">
+                    <img src="./img/blog-card-logo-link.png" alt="лого" />
+                  </a>
+                  <span class="news__date">01/03/2024</span>
+                  <a class="news__heading" href="#">Заголовок статьи</a>
+                  <p class="news__text">Короткое содержание статьи</p>
+                </div>
+                <a class="news__arrow-link" href="#">
+                  <img
+                    src="./img/blog-card-arrow-link.svg"
+                    alt="стрелка вправо"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="blog__post-info">
+              <!-- <ul class="tag-list">
+                <li class="tag-list__item tag-list__item-active">Tab Item</li>
+                <li class="tag-list__item">Tab Item</li>
+                <li class="tag-list__item">Tab Item</li>
+                <li class="tag-list__item">Tab Item</li>
+              </ul> -->
+
+              <div class="tabs-container">
+                <input type="radio" id="tab1" name="tabs" checked />
+                <label for="tab1" class="tab-label tab-label-active"
+                  >Tab Item 1</label
+                >
+
+                <input type="radio" id="tab2" name="tabs" />
+                <label for="tab2" class="tab-label">Tab Item 2</label>
+
+                <input type="radio" id="tab3" name="tabs" />
+                <label for="tab3" class="tab-label">Tab Item 3</label>
+
+                <input type="radio" id="tab4" name="tabs" />
+                <label for="tab4" class="tab-label">Tab Item 4</label>
+              </div>
+
+              <ul class="post-info">
+                <li class="post-info__item">
+                  Сегодня
+                  <span class="post-info__item-text"
+                    >Короткое содержание статьи</span
+                  >
+                </li>
+                <li class="post-info__item">
+                  01/03/2024
+                  <span class="post-info__item-text"
+                    >Короткое содержание статьи</span
+                  >
+                </li>
+                <li class="post-info__item">
+                  01/03/2024
+                  <span class="post-info__item-text"
+                    >Короткое содержание статьи</span
+                  >
+                </li>
+                <li class="post-info__item">
+                  01/03/2024
+                  <span class="post-info__item-text"
+                    >Короткое содержание статьи</span
+                  >
+                </li>
+                <li class="post-info__item">
+                  01/03/2024
+                  <span class="post-info__item-text"
+                    >Короткое содержание статьи</span
+                  >
+                </li>
+                <li class="post-info__item">
+                  01/03/2024
+                  <span class="post-info__item-text"
+                    >Короткое содержание статьи</span
+                  >
+                </li>
+                <li class="post-info__item">
+                  01/03/2024
+                  <span class="post-info__item-text"
+                    >Короткое содержание статьи в два столбца</span
+                  >
+                </li>
+                <a class="calc__about-link post-info__link" href="#"
+                  >Linked button</a
+                >
+              </ul>
+            </div>
           </div>
         </section>
         <!--  -->
