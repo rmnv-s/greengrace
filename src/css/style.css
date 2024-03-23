@@ -1090,6 +1090,112 @@ input[type=number] {
   bottom: 3.2rem;
 }
 
+.footer {
+  background: -webkit-gradient(linear, left top, right top, from(#00d8d8), to(#02ff49));
+  background: -o-linear-gradient(left, #00d8d8 0%, #02ff49 100%);
+  background: linear-gradient(90deg, #00d8d8 0%, #02ff49 100%);
+  border-radius: 3.2rem 3.2rem 0rem 0rem;
+}
+.footer__container {
+  padding: 4.8rem 3.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footer__nav {
+  min-width: 44.8rem;
+  list-style-type: none;
+}
+.footer__nav:first-child {
+  margin-right: 3.2rem;
+}
+.footer__nav:nth-child(2) {
+  margin-right: 16.8rem;
+}
+.footer__nav-heading {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.6rem;
+}
+.footer__nav-item:not(:last-child) {
+  margin-bottom: 0.8rem;
+}
+.footer__nav-link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+.footer__action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.footer__action-link {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 0.8rem 1.6rem;
+  border: 0.2rem solid #ffffff;
+  border-radius: 2.6rem;
+  max-width: 7.5rem;
+  text-align: center;
+  margin: 1.6rem 0;
+}
+.footer__action-nav {
+  list-style-type: none;
+}
+
+.copyright {
+  border-top: 0.1rem solid #ffffff;
+  margin: 0 3.2rem;
+  padding: 1.6rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.copyright__text {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.copyright__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+}
+.copyright__nav-item:not(:last-child) {
+  margin-right: 1.6rem;
+}
+.copyright__nav-link {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #ffffff;
+}
+
 .widget {
   padding: 3.2rem 0;
 }

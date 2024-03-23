@@ -1,0 +1,98 @@
+@use "helpers/color" as *;
+@use "helpers/text" as *;
+
+.footer {
+  background: linear-gradient(90deg, #00d8d8 0%, #02ff49 100%);
+  border-radius: 3.2rem 3.2rem 0rem 0rem;
+  &__container {
+    padding: 4.8rem 3.2rem;
+    display: flex;
+  }
+
+  &__nav {
+    min-width: 44.8rem;
+    list-style-type: none;
+
+    &:first-child {
+      margin-right: 3.2rem;
+    }
+
+    &:nth-child(2) {
+      margin-right: 16.8rem;
+    }
+
+    &-heading {
+      @include heading-h4;
+      color: $color-white;
+      margin-bottom: 1.6rem;
+    }
+
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 0.8rem;
+      }
+    }
+
+    &-link {
+      text-decoration: none;
+      @include body-small;
+      color: $color-white;
+    }
+  }
+
+  &__action {
+    display: flex;
+    flex-direction: column;
+
+    &-link {
+      text-decoration: none;
+      color: $color-white;
+      padding: 0.8rem 1.6rem;
+      border: 0.2rem solid $color-white;
+      border-radius: 2.6rem;
+      max-width: 7.5rem;
+      text-align: center;
+      margin: 1.6rem 0;
+    }
+
+    &-nav {
+      list-style-type: none;
+    }
+  }
+}
+
+.copyright {
+  // outline: 1px solid tomato;
+  border-top: 0.1rem solid $color-white;
+  margin: 0 3.2rem;
+  padding: 1.6rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__text {
+    @include body-small;
+    color: $color-white;
+    text-transform: uppercase;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    // outline: 1px solid tomato;
+
+    &-item {
+      &:not(:last-child) {
+        margin-right: 1.6rem;
+      }
+    }
+
+    &-link {
+      @include body-small;
+      text-decoration: none;
+      color: $color-white;
+    }
+  }
+}
