@@ -1,8 +1,9 @@
 @use "helpers/color" as *;
 @use "helpers/text" as *;
+
 .first-display {
   position: relative;
-  height: 50.6rem;
+  min-height: 50.6rem;
   margin-bottom: 3.2rem;
   background-image: linear-gradient(
       180deg,
@@ -12,7 +13,20 @@
     url("../../../img/first-display-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 0px 0px 32px 32px;
+  border-radius: 0rem 0rem 3.2rem 3.2rem;
+
+  @media (max-width: 425px) {
+    border-radius: 0;
+  }
+
+  &__wrapper {
+    max-width: 1408px;
+    margin: 0 auto;
+
+    @media (max-width: 425px) {
+      padding: 0;
+    }
+  }
 
   &__inner {
     display: flex;
@@ -22,6 +36,9 @@
 
   &__img {
     margin: 11.2rem 0 3.2rem 0;
+    @media (max-width: 425px) {
+      max-width: 29rem;
+    }
   }
 
   &__heading {
@@ -39,6 +56,17 @@
 
     max-width: 74.2rem;
     margin-bottom: 3.2rem;
+
+    @media (max-width: 768px) {
+      font-size: 3.2rem;
+      line-height: 3.8rem;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 2rem;
+      line-height: 2.4rem;
+      max-width: 32.6rem;
+    }
   }
 
   &__subheading {
@@ -47,10 +75,28 @@
     font-weight: 700;
     color: $color-white;
     margin-bottom: 3.2rem;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+      line-height: 2rem;
+    }
+
+    @media (max-width: 425px) {
+      font-size: 1.6rem;
+    }
   }
 
   &__actions {
     padding: 1.6rem 0;
+
+    @media (max-width: 425px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    }
 
     &-link {
       position: relative;
@@ -60,6 +106,10 @@
       line-height: 2rem;
       font-weight: 700;
       margin-left: 1.6rem;
+
+      @media (max-width: 425px) {
+        margin: 1.6rem 0 2rem 0;
+      }
 
       &::before {
         content: "";
@@ -71,11 +121,20 @@
         background-image: url("../img/first-display-arrow-right.svg");
         background-repeat: no-repeat;
         background-position: center center;
+
+        @media (max-width: 425px) {
+          // right: 0;
+        }
       }
     }
   }
 
   &__note {
     color: $color-white;
+    margin-top: 1.6rem;
+    @media (max-width: 425px) {
+      margin-top: 0;
+      margin-bottom: 2rem;
+    }
   }
 }

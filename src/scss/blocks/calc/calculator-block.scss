@@ -6,13 +6,38 @@
   display: flex;
   justify-content: space-between;
   gap: 3.2rem;
+
+  @media (max-width: 1024px) {
+    gap: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+
+  @media (max-width: 425px) {
+    flex-wrap: nowrap;
+  }
 }
 
 .calculator-section {
   background-color: $color-white;
   padding: 3.2rem;
   border-radius: 3.2rem;
-  width: 44.8rem;
+  min-width: 44.8rem;
+
+  @media (max-width: 768px) {
+    min-width: 38rem;
+  }
+
+  @media (max-width: 425px) {
+    min-width: 30rem;
+  }
+
+  @media (max-width: 375px) {
+    min-width: 28rem;
+  }
 }
 
 .subheading {
@@ -55,6 +80,17 @@
 .tab-container {
   display: flex;
   margin-bottom: 1.6rem;
+
+  @media (max-width: 425px) {
+    overflow-x: auto;
+    scrollbar-width: none; /* Скрываем стандартную полосу прокрутки для Firefox */
+    -ms-overflow-style: none; /* Скрываем стандартную полосу прокрутки для IE и Edge */
+  }
+  @media (max-width: 425px) {
+    ::-webkit-scrollbar {
+      display: none; /* Скрываем стандартную полосу прокрутки для WebKit */
+    }
+  }
 
   &__item {
     list-style-type: none;

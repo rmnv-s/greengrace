@@ -3,24 +3,35 @@
 
 .blog {
   &__post {
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   &__container {
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 3.2rem;
+    // flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
 .news {
   position: relative;
-  max-width: 68.8rem;
+  // max-width: 68.8rem;
   border-radius: 2.6rem;
   background-color: $color-white;
 
   &__image {
     display: block;
     border-radius: 2.6rem 2.6rem 0rem 0rem;
+    width: 100%;
   }
 
   &__tag {
@@ -80,9 +91,31 @@
 
 // ///////////////////////////////////////////
 .tabs-container {
-  display: flex;
+  position: absolute;
+  display: block;
   list-style-type: none;
   margin-bottom: 3.2rem;
+  // outline: 1px solid blue;
+  white-space: nowrap; /* Предотвращает перенос текста на новую строку */
+  overflow-x: auto; /* Добавляет горизонтальную прокрутку при необходимости */
+  max-width: 100%;
+
+  padding: 10px 0 2.6rem 0;
+  z-index: 1;
+
+  &::-webkit-scrollbar {
+    height: 0.8rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-main;
+    border-radius: 0.8rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $color-white;
+    border-radius: 0.8rem;
+  }
 
   .tab-label {
     @include body-small;
@@ -91,6 +124,9 @@
     padding: 0.8rem 1.6rem;
     border-radius: 2.6rem;
     cursor: pointer;
+    max-width: 10.6rem;
+    text-align: center;
+    white-space: nowrap;
 
     &:not(:last-child) {
       margin-right: 0.8rem;
@@ -108,17 +144,23 @@
 }
 
 .blog__post-info {
-  min-width: 68.8rem;
+  // max-width: 68.8rem;
+  position: relative;
+  overflow: hidden;
+  // outline: 1px solid tomato;
 }
 
 .post-info {
   position: relative;
-  // display: flex;
-  // flex-direction: column;
   background-color: $color-white;
   min-height: 39.3rem;
   border-radius: 3.2rem;
   padding: 3.2rem;
+  margin-top: 6.2rem;
+
+  @media (max-width: 425px) {
+    margin-top: 7.5rem;
+  }
 
   &__item {
     // outline: 1px solid tomato;
@@ -130,10 +172,16 @@
     &:not(:last-child) {
       margin-bottom: 1.6rem;
     }
+    @media (max-width: 425px) {
+      @include body-small;
+    }
 
     &-text {
       color: $color-text;
       max-width: 25.5rem;
+      @media (max-width: 425px) {
+        max-width: 100%;
+      }
     }
   }
 

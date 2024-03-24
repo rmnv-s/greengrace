@@ -11,8 +11,8 @@
     <title>Green Grace</title>
   </head>
   <body class="root">
-    <div class="page page__wrapper">
-      <section class="first-display">
+    <div class="page">
+      <section class="first-display first-display__wrapper">
         <header class="header">
           <img
             class="header__logo"
@@ -80,7 +80,7 @@
       <!-- MAIN -->
       <main class="main">
         <!-- WIDGET BENEFITS -->
-        <section class="benefits widget">
+        <section class="benefits widget page__wrapper">
           <h2 class="widget__heading benefits__heading">Заголовок виджета</h2>
           <ul class="benefits__list">
             <li class="benefits__list-item">Подпись 1</li>
@@ -133,9 +133,9 @@
         <!--  -->
 
         <!-- WIDGET CALC -->
-        <section class="calc widget">
+        <section class="calc widget page__wrapper">
           <h2 class="widget__heading calc__heading">Заголовок виджета</h2>
-          <!--  -->
+
           <div class="calc__about">
             <img
               class="calc__about-logo"
@@ -155,9 +155,8 @@
               alt="картика"
             />
           </div>
-          <!--  -->
+
           <div class="calculator-block">
-            <!--  -->
             <fieldset class="calculator-section">
               <div class="subheading">Подзаголовок</div>
               <div class="input-container">
@@ -177,7 +176,7 @@
                 <li class="tab-container__item" data-value="5000">5000</li>
                 <li class="tab-container__item" data-value="10000">10000</li>
               </ul>
-              <!--  -->
+
               <div class="input-container input-container__range">
                 <label for="month-input"> Interval </label>
                 <input
@@ -197,7 +196,6 @@
                 />
               </div>
             </fieldset>
-            <!--  -->
             <div class="values-block">
               <div class="subheading">Подзаголовок</div>
 
@@ -228,12 +226,11 @@
               <p class="note values-block__note">Сноска</p>
             </div>
           </div>
-          <!--  -->
         </section>
         <!--  -->
 
         <!-- WIDGET INFO -->
-        <section class="info widget">
+        <section class="info widget page__wrapper">
           <h2 class="widget__heading info__heading">Заголовок виджета</h2>
           <h3 class="widget__subheading info__subheading">
             Подзаголовок виджета
@@ -300,26 +297,29 @@
         <!--  -->
 
         <!-- WIDGET FAQ -->
-        <section class="faq widget">
+        <section class="faq widget page__wrapper">
           <h2 class="widget__heading info__heading">Заголовок виджета</h2>
           <h3 class="widget__subheading faq__subheading">
             Подзаголовок виджета
           </h3>
 
-          <ul class="faq__list">
-            <li class="faq__list-item">Подзаголовок</li>
-            <li class="faq__list-item">Подзаголовок</li>
-            <li class="faq__list-item">Подзаголовок</li>
-            <li class="faq__list-item">Подзаголовок</li>
-            <li class="faq__list-item">Подзаголовок</li>
-          </ul>
+          <div class="faq__container">
+            <ul class="faq__list">
+              <li class="faq__list-item">Подзаголовок</li>
+              <li class="faq__list-item">Подзаголовок</li>
+              <li class="faq__list-item">Подзаголовок</li>
+              <li class="faq__list-item">Подзаголовок</li>
+              <li class="faq__list-item">Подзаголовок</li>
+            </ul>
+          </div>
 
           <a class="button button-link faq__button" href="#">Button</a>
         </section>
         <!--  -->
         <!-- WIDGET BLOG -->
-        <section class="blog widget">
+        <section class="blog widget page__wrapper">
           <h2 class="widget__heading calc__heading">Заголовок виджета</h2>
+
           <div class="blog__container">
             <div class="blog__post">
               <div class="news">
@@ -346,14 +346,8 @@
                 </a>
               </div>
             </div>
-            <div class="blog__post-info">
-              <!-- <ul class="tag-list">
-                <li class="tag-list__item tag-list__item-active">Tab Item</li>
-                <li class="tag-list__item">Tab Item</li>
-                <li class="tag-list__item">Tab Item</li>
-                <li class="tag-list__item">Tab Item</li>
-              </ul> -->
 
+            <div class="blog__post-info">
               <div class="tabs-container">
                 <input type="radio" id="tab1" name="tabs" checked />
                 <label for="tab1" class="tab-label tab-label-active"
@@ -368,6 +362,9 @@
 
                 <input type="radio" id="tab4" name="tabs" />
                 <label for="tab4" class="tab-label">Tab Item 4</label>
+
+                <input type="radio" id="tab4" name="tabs" />
+                <label for="tab4" class="tab-label">Tab Item 5</label>
               </div>
 
               <ul class="post-info">
@@ -423,7 +420,7 @@
         <!--  -->
       </main>
       <!-- FOOTER -->
-      <footer class="footer">
+      <footer class="footer first-display__wrapper">
         <div class="footer__container">
           <ul class="footer__nav">
             <p class="footer__nav-heading">Группа 1</p>
@@ -456,7 +453,11 @@
             </li>
           </ul>
           <div class="footer__action">
-            <img src="./img/footer-logo.svg" alt="лого" />
+            <img
+              class="footer__action-img"
+              src="./img/footer-logo.svg"
+              alt="лого"
+            />
             <a class="footer__action-link" href="#"> Button </a>
             <ul class="footer__action-nav">
               <li class="footer__nav-item">

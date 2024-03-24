@@ -4,12 +4,21 @@
   // outline: 1px solid green;
   padding: 3.2rem 0;
 
+  @media (max-width: 1024px) {
+    padding: 3.2rem 2rem;
+  }
+
   &__heading {
     font-size: 2.8rem;
     line-height: 3.4rem;
     font-weight: 800;
     text-align: center;
     color: $color-text;
+
+    @media (max-width: 425px) {
+      font-size: 1.6rem;
+      line-height: 2rem;
+    }
   }
 
   &__subheading {
@@ -18,5 +27,10 @@
     font-weight: 700;
     text-align: center;
     color: $color-text;
+
+    @media (max-width: 425px) {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+    }
   }
 }

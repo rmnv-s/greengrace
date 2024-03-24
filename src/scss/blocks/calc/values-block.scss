@@ -9,12 +9,17 @@
   flex-direction: column;
   align-items: center;
 
+  @media (max-width: 1024px) {
+    padding: 3.2rem 1rem;
+  }
+
   &__button {
   }
 
   &__note {
     color: $color-text-hover;
     text-align: center;
+    margin-top: 1.6rem;
   }
 }
 
@@ -22,45 +27,93 @@
   margin-bottom: 3.2rem;
 
   &__summary {
-    display: flex;
-    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.6rem;
     text-align: center;
+    list-style-type: none;
+    min-width: 86.4rem;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      min-width: 49rem;
+    }
+
+    @media (max-width: 768px) {
+      min-width: 68rem;
+    }
+
+    @media (max-width: 425px) {
+      grid-template-columns: 1fr 1fr;
+      min-width: 35rem;
+    }
+
+    @media (max-width: 375px) {
+      grid-template-columns: 1fr 1fr;
+      min-width: 24rem;
+    }
 
     & :first-child {
-      margin-right: 1.6rem;
+      // margin-right: 1.6rem;
     }
 
     & :last-child {
-      margin-left: 1.6rem;
+      // margin-left: 1.6rem;
     }
 
     & :nth-child(2) {
-      margin: 0 1.6rem;
+      // margin: 0 1.6rem;
+    }
+  }
+
+  & :nth-child(3) {
+    // margin: 0 1.6rem;
+  }
+
+  & :not(:last-child) {
+    position: relative;
+    // background-color: tomato;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0rem;
+      right: -1rem;
+      width: 0.2rem;
+      height: 100%;
+      background-color: $color-main;
+      border-radius: 0.2rem;
+    }
+  }
+  & :nth-child(2)::before {
+    @media (max-width: 425px) {
+      // background-color: red;
+      left: -183px;
+      top: 92px;
+      width: 350px;
+      height: 2px;
+    }
+    @media (max-width: 390px) {
+      left: -160px;
+      top: 92px;
+      width: 300px;
     }
 
-    & :nth-child(3) {
-      margin: 0 1.6rem;
+    @media (max-width: 375px) {
+      left: -152px;
+      top: 92px;
+      width: 290px;
     }
 
-    & :not(:last-child) {
-      position: relative;
-      // background-color: tomato;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0rem;
-        right: -1.6rem;
-        width: 0.2rem;
-        height: 100%;
-        background-color: $color-main;
-        border-radius: 0.2rem;
-      }
+    @media (max-width: 320px) {
+      left: -133px;
+      top: 92px;
+      width: 250px;
     }
   }
 
   &__item {
-    min-width: 19.5rem;
+    // min-width: 19.5rem;
     @include body-copy;
     color: $color-text;
     padding: 1.4rem 0;
