@@ -10,6 +10,9 @@
   padding: 1.6rem 3.2rem;
   z-index: 1;
 
+  @media (max-width: 425px) {
+    justify-content: end;
+  }
   &__logo {
     margin-right: 3.2rem;
     @media (max-width: 768px) {
