@@ -1,4 +1,5 @@
 const sliderInput = document.querySelector(".slider-input");
+const placeholderInput = document.querySelector(".month-input");
 
 function updateSliderRangeBackground() {
   const e =
@@ -12,9 +13,7 @@ sliderInput.addEventListener("input", updateSliderRangeBackground);
 updateSliderRangeBackground();
 
 //
-const placeholderInput = document.querySelector(".month-input");
 function updateStep(value) {
-  // var slider = document.querySelector(".slider-input");
   const numericValue = parseInt(value);
   let stepValue;
   let placeholderValue;
@@ -45,16 +44,15 @@ function updateStep(value) {
 
 placeholderInput.addEventListener("input", function () {
   if (this.value.length > 2) {
-    this.value = this.value.slice(0, 2); // Обрезаем значение до 4 символов
+    this.value = this.value.slice(0, 2);
   }
 });
 
 placeholderInput.addEventListener("change", function () {
-  // var inputValue = parseInt(this.value); // Преобразуем значение в число
-  var inputValue = this.value; // Преобразуем значение в число
+  const inputValue = parseInt(this.value);
 
   // Округляем ввод до ближайшего значения из диапазона
-  var roundedValue;
+  let roundedValue;
   if (inputValue <= 6) {
     roundedValue = 6;
   } else if (inputValue <= 12) {
@@ -67,11 +65,16 @@ placeholderInput.addEventListener("change", function () {
     roundedValue = 48;
   }
 
-  // Обновляем значение в поле ввода с добавлением "месяцев"
-  this.value = roundedValue;
-
   // Обновляем значение ползунка
+  let a = placeholderInput.placeholder = roundedValue + " месяцев";
   sliderInput.value = roundedValue;
-  // placeholderInput.placeholder.value = roundedValue + " месяцев";
-  placeholderInput.value = roundedValue + " месяцев";
+  placeholderInput.value = a;
+
+  const e =
+      ((sliderInput.value - sliderInput.min) /
+        (sliderInput.max - sliderInput.min)) *
+      100;
+    sliderInput.style.background = `linear-gradient(to right, #00d8d8 ${e}%, #f5f5f7 ${e}%)`;
 });
+
+
