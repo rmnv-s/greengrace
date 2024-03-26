@@ -1,5 +1,6 @@
 const sliderInput = document.querySelector(".slider-input");
 const placeholderInput = document.querySelector(".month-input");
+const sumInput = document.querySelector(".sum-input");
 
 function updateSliderRangeBackground() {
   const e =
@@ -66,15 +67,62 @@ placeholderInput.addEventListener("change", function () {
   }
 
   // Обновляем значение ползунка
-  let a = placeholderInput.placeholder = roundedValue + " месяцев";
+  let a = (placeholderInput.placeholder = roundedValue + " месяцев");
   sliderInput.value = roundedValue;
   placeholderInput.value = a;
 
   const e =
-      ((sliderInput.value - sliderInput.min) /
-        (sliderInput.max - sliderInput.min)) *
-      100;
-    sliderInput.style.background = `linear-gradient(to right, #00d8d8 ${e}%, #f5f5f7 ${e}%)`;
+    ((sliderInput.value - sliderInput.min) /
+      (sliderInput.max - sliderInput.min)) *
+    100;
+  sliderInput.style.background = `linear-gradient(to right, #00d8d8 ${e}%, #f5f5f7 ${e}%)`;
 });
 
+const tabItems = document.querySelectorAll(".tab-container__item");
+const summ = document.querySelector(".count__value-summ");
+const result = document.querySelector(".count__value-result");
 
+// Обработчик события изменения поля ввода sumInput
+sumInput.addEventListener("input", function (event) {
+  const inputValue = event.target.value;
+  const activeTab = document.querySelector(".tab-active");
+  const activeTabValue = parseInt(activeTab.dataset.value);
+
+  if (inputValue === "") {
+    summ.textContent = activeTabValue;
+    calculate(result, activeTabValue);
+  } else {
+    summ.textContent = inputValue;
+    calculate(result, parseInt(sumInput.value));
+  }
+});
+
+// Обработчик события изменения поля ввода sumInput (если пользователь ввел значение и потерял фокус с поля ввода)
+sumInput.addEventListener("change", function (event) {});
+
+// Добавляем обработчик события клика для каждого элемента
+tabItems.forEach(function (item) {
+  item.addEventListener("click", function () {
+    tabItems.forEach(function (tabItem) {
+      tabItem.classList.remove("tab-active");
+    });
+
+    this.classList.add("tab-active");
+    sumInput.placeholder = item.dataset.value;
+    summ.textContent = item.dataset.value;
+
+    calculate(result, parseInt(sumInput.placeholder));
+  });
+});
+
+// Функция calculate
+function calculate(result, summ) {
+  const AdditionalPercent = 20;
+  const Percent = 15;
+
+  const Additional = summ * (AdditionalPercent / 100);
+  const PercentDecimal = Percent / 100;
+
+  const resultSumm = summ + Additional + (summ + Additional) * PercentDecimal;
+  result.textContent = resultSumm;
+}

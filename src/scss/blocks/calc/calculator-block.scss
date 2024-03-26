@@ -107,6 +107,11 @@
   }
 }
 
+.tab-active {
+  background-color: $color-main;
+  color: $color-white;
+}
+
 .month-input {
   margin-bottom: 1.6rem;
 }

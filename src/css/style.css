@@ -1,7 +1,9 @@
 @charset "UTF-8";
 html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
 
 body {
@@ -14,14 +16,19 @@ main {
 
 hr {
   -webkit-box-sizing: content-box;
-          box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
 }
 
 pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
 }
 
 a {
@@ -29,10 +36,13 @@ a {
 }
 
 abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+          text-decoration: underline dotted;
+  /* 2 */
 }
 
 b,
@@ -43,8 +53,10 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
 }
 
 small {
@@ -78,10 +90,14 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
 }
 
 button,
@@ -142,12 +158,18 @@ fieldset {
  */
 legend {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
+          box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
 }
 
 /**
@@ -171,8 +193,10 @@ textarea {
 [type=checkbox],
 [type=radio] {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
 }
 
 /**
@@ -188,8 +212,10 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
 }
 
 /**
@@ -204,8 +230,10 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
 }
 
 /* Interactive
@@ -399,6 +427,7 @@ html {
   min-height: 50.6rem;
   margin-bottom: 3.2rem;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 255, 73, 0)), to(#02ff49)), url("../../../img/first-display-bg.jpg");
+  background-image: -o-linear-gradient(top, rgba(2, 255, 73, 0) 0%, #02ff49 100%), url("../../../img/first-display-bg.jpg");
   background-image: linear-gradient(180deg, rgba(2, 255, 73, 0) 0%, #02ff49 100%), url("../../../img/first-display-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -445,6 +474,7 @@ html {
   font-weight: 700;
   text-align: center;
   background-image: -webkit-gradient(linear, left top, right top, from(#00d8d8), to(#02ff49));
+  background-image: -o-linear-gradient(left, #00d8d8 0%, #02ff49 100%);
   background-image: linear-gradient(90deg, #00d8d8 0%, #02ff49 100%);
   color: transparent;
   background-clip: text;
@@ -614,6 +644,7 @@ html {
   position: relative;
   border-radius: 32px;
   background: -webkit-gradient(linear, left top, right top, from(#00d8d8), to(#02ff49));
+  background: -o-linear-gradient(left, #00d8d8 0%, #02ff49 100%);
   background: linear-gradient(90deg, #00d8d8 0%, #02ff49 100%);
   padding: 3.2rem;
   margin-bottom: 3.2rem;
@@ -754,7 +785,8 @@ html {
   position: absolute;
   top: 0.8rem;
   left: 1.6rem;
-  pointer-events: none; /* чтобы метка не перехватывала события мыши */
+  pointer-events: none;
+  /* чтобы метка не перехватывала события мыши */
   font-size: 1.2rem;
   line-height: 1.4rem;
   font-weight: 500;
@@ -770,13 +802,16 @@ html {
 @media (max-width: 425px) {
   .tab-container {
     overflow-x: auto;
-    scrollbar-width: none; /* Скрываем стандартную полосу прокрутки для Firefox */
-    -ms-overflow-style: none; /* Скрываем стандартную полосу прокрутки для IE и Edge */
+    scrollbar-width: none;
+    /* Скрываем стандартную полосу прокрутки для Firefox */
+    -ms-overflow-style: none;
+    /* Скрываем стандартную полосу прокрутки для IE и Edge */
   }
 }
 @media (max-width: 425px) {
   .tab-container ::-webkit-scrollbar {
-    display: none; /* Скрываем стандартную полосу прокрутки для WebKit */
+    display: none;
+    /* Скрываем стандартную полосу прокрутки для WebKit */
   }
 }
 .tab-container__item {
@@ -793,36 +828,58 @@ html {
   margin-right: 0.8rem;
 }
 
+.tab-active {
+  background-color: #00d8d8;
+  color: #ffffff;
+}
+
 .month-input {
   margin-bottom: 1.6rem;
 }
 
 .slider-input {
-  -webkit-appearance: none; /* Убираем стандартный стиль в Chrome и Safari */
-  width: 100%; /* Ширина ползунка */
-  height: 0.2rem; /* Высота ползунка */
-  background: #00d8d8; /* Цвет фона ползунка */
-  outline: none; /* Убираем контур */
-  -webkit-transition: 0.2s; /* Плавный переход в Chrome и Safari */
+  -webkit-appearance: none;
+  /* Убираем стандартный стиль в Chrome и Safari */
+  width: 100%;
+  /* Ширина ползунка */
+  height: 0.2rem;
+  /* Высота ползунка */
+  background: #00d8d8;
+  /* Цвет фона ползунка */
+  outline: none;
+  /* Убираем контур */
+  -webkit-transition: 0.2s;
+  /* Плавный переход в Chrome и Safari */
   -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s; /* Плавный переход в других браузерах */
-  border-radius: 0.5rem; /* Скругляем углы */
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  /* Плавный переход в других браузерах */
+  border-radius: 0.5rem;
+  /* Скругляем углы */
 }
 
 /* Изменяем цвет ползунка при его активации */
 .slider-input::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Убираем стандартный стиль в Chrome и Safari */
-  width: 1.6rem; /* Ширина "бегунка" */
-  height: 1.6rem; /* Высота "бегунка" */
-  background: #00d8d8; /* Цвет "бегунка" */
-  cursor: pointer; /* Изменяем курсор при наведении на "бегунок" */
-  border-radius: 50%; /* Делаем "бегунок" круглым */
+  -webkit-appearance: none;
+  /* Убираем стандартный стиль в Chrome и Safari */
+  width: 1.6rem;
+  /* Ширина "бегунка" */
+  height: 1.6rem;
+  /* Высота "бегунка" */
+  background: #00d8d8;
+  /* Цвет "бегунка" */
+  cursor: pointer;
+  /* Изменяем курсор при наведении на "бегунок" */
+  border-radius: 50%;
+  /* Делаем "бегунок" круглым */
 }
 
 /* Изменяем цвет ползунка при его активации в Firefox */
 .slider-input::-moz-range-thumb {
-  width: 1.6rem; /* Ширина "бегунка" */
-  height: 1.6rem; /* Высота "бегунка" */
+  width: 1.6rem;
+  /* Ширина "бегунка" */
+  height: 1.6rem;
+  /* Высота "бегунка" */
   cursor: pointer;
   border-radius: 50%;
 }
@@ -856,11 +913,13 @@ input {
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
-  margin: 0; /* Может потребоваться изменить, в зависимости от требуемого отступа */
+  margin: 0;
+  /* Может потребоваться изменить, в зависимости от требуемого отступа */
 }
 
 input[type=number] {
-  -moz-appearance: textfield; /* Для Firefox */
+  -moz-appearance: textfield;
+  /* Для Firefox */
 }
 
 .values-block {
@@ -1036,12 +1095,16 @@ input[type=number] {
     height: 0.8rem;
   }
   .info__inner::-webkit-scrollbar-thumb {
-    background-color: #00d8d8; /* Цвет ползунка */
-    border-radius: 0.8rem; /* Скругление углов ползунка */
+    background-color: #00d8d8;
+    /* Цвет ползунка */
+    border-radius: 0.8rem;
+    /* Скругление углов ползунка */
   }
   .info__inner::-webkit-scrollbar-track {
-    background-color: #ffffff; /* Цвет трека */
-    border-radius: 0.8rem; /* Скругление углов ползунка */
+    background-color: #ffffff;
+    /* Цвет трека */
+    border-radius: 0.8rem;
+    /* Скругление углов ползунка */
   }
 }
 .info__card {
@@ -1298,8 +1361,10 @@ input[type=number] {
   display: block;
   list-style-type: none;
   margin-bottom: 3.2rem;
-  white-space: nowrap; /* Предотвращает перенос текста на новую строку */
-  overflow-x: auto; /* Добавляет горизонтальную прокрутку при необходимости */
+  white-space: nowrap;
+  /* Предотвращает перенос текста на новую строку */
+  overflow-x: auto;
+  /* Добавляет горизонтальную прокрутку при необходимости */
   max-width: 100%;
   padding: 10px 0 2.6rem 0;
   z-index: 1;
@@ -1337,7 +1402,8 @@ input[type=number] {
   pointer-events: none;
 }
 .tabs-container input[type=radio]:checked + .tab-label {
-  background-color: #007f9b; /* Цвет фона выбранного таба */
+  background-color: #007f9b;
+  /* Цвет фона выбранного таба */
 }
 
 .blog__post-info {
@@ -1395,6 +1461,7 @@ input[type=number] {
 
 .footer {
   background: -webkit-gradient(linear, left top, right top, from(#00d8d8), to(#02ff49));
+  background: -o-linear-gradient(left, #00d8d8 0%, #02ff49 100%);
   background: linear-gradient(90deg, #00d8d8 0%, #02ff49 100%);
   border-radius: 3.2rem 3.2rem 0rem 0rem;
 }
