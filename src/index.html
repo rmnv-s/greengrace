@@ -186,16 +186,17 @@
                   type="number"
                   class="month-input input"
                   placeholder="12 месяцев"
-                  min="3"
-                  max="18"
-                  step="3"
+                  min="0"
+                  max="48"
                 />
                 <input
                   type="range"
                   class="slider-input"
-                  min="3"
-                  max="18"
-                  step="3"
+                  min="0"
+                  max="48"
+                  value="12"
+                  step="6"
+                  oninput="updateStep(this.value);"
                 />
               </div>
             </fieldset>
