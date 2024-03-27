@@ -124,5 +124,5 @@ function calculate(result, summ) {
   const PercentDecimal = Percent / 100;
 
   const resultSumm = summ + Additional + (summ + Additional) * PercentDecimal;
-  result.textContent = resultSumm;
+  result.textContent = Math.ceil(resultSumm);
 }
