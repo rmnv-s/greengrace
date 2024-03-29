@@ -17,50 +17,50 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 3.2rem 3.2rem;
     }
   }
 
   &__nav {
-    min-width: 44.8rem;
     list-style-type: none;
+    opacity: 1;
+    transition: opacity 0.3s ease;
 
     @media (max-width: 768px) {
       text-align: center;
     }
 
-    @media (max-width: 1024px) {
-      min-width: 24.8rem;
-    }
-
-    @media (max-width: 768px) {
-      min-width: 13rem;
-    }
-
-    &:first-child {
-      margin-right: 3.2rem;
-
+    &:nth-child(2) {
       @media (max-width: 768px) {
         margin-right: 0;
         margin-bottom: 1.6rem;
       }
     }
 
-    &:nth-child(2) {
-      margin-right: 16.8rem;
-
-      @media (max-width: 768px) {
-        margin-right: 0;
-        margin-bottom: 3.2rem;
-      }
-    }
-
     &-heading {
+      position: relative;
+      display: inline-block;
       @include heading-h4;
       color: $color-white;
       margin-bottom: 1.6rem;
 
       @media (max-width: 768px) {
         @include body-copy;
+        cursor: pointer;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0.2rem;
+          right: -2rem;
+          width: 1.5rem;
+          height: 1.5rem;
+          background-image: url("../img/first-display-arrow-right.svg");
+          background-repeat: no-repeat;
+          background-position: center center;
+          transform: rotate(-90deg);
+          transition: transform 0.3s ease;
+        }
       }
     }
 
@@ -82,6 +82,7 @@
     flex-direction: column;
 
     &-img {
+      max-width: 24.7rem;
       @media (max-width: 768px) {
         display: none;
       }
@@ -161,16 +162,34 @@
 
 .footer-display__wrapper {
   max-width: 1408px;
-  margin: 0 auto;
+  margin: 3.2rem auto 0 auto;
 
   @media (max-width: 768px) {
     padding: 0;
   }
 }
 
-.footer__nav-item-2 {
-  // outline: 1px solid tomato;
-  @media (max-width: 768px) {
-    // display: none;
+.hidden-link-footer {
+  display: none;
+  opacity: 0;
+}
+
+.footer__content {
+  display: block;
+
+  &:nth-child(2) {
+    flex: 1 1 auto;
   }
+
+  &:nth-child(1) {
+    flex: 0.75 1 auto;
+  }
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+}
+
+.rotate-arrow::after {
+  transform: rotate(90deg);
 }

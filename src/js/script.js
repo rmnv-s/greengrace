@@ -126,3 +126,20 @@ function calculate(result, summ) {
   const resultSumm = summ + Additional + (summ + Additional) * PercentDecimal;
   result.textContent = Math.ceil(resultSumm);
 }
+
+//
+// Футер списки
+const headings = document.querySelectorAll(".footer__nav-heading");
+
+headings.forEach((heading) => {
+  heading.addEventListener("click", function () {
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    if (isMobile) {
+      const list = this.nextElementSibling;
+
+      list.classList.toggle("hidden-link-footer");
+      this.classList.toggle("rotate-arrow");
+    }
+  });
+});
+post - info__item - text;
