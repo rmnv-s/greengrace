@@ -160,6 +160,11 @@
 
   @media (max-width: 768px) {
     margin-top: 6.5rem;
+    min-height: 30rem;
+  }
+
+  @media (max-width: 425px) {
+    // min-height: 35rem;
   }
 
   &__item {
@@ -172,6 +177,7 @@
     &:not(:last-child) {
       margin-bottom: 1.6rem;
     }
+
     @media (max-width: 768px) {
       @include body-small;
     }
@@ -179,6 +185,7 @@
     &-text {
       color: $color-text;
       max-width: 25.5rem;
+
       @media (max-width: 768px) {
         max-width: 100%;
       }
@@ -189,7 +196,10 @@
     position: absolute;
     right: 4.2rem;
     bottom: 3.2rem;
-    // align-self: flex-end;
-    // margin-right: 1rem;
+
+    @media (max-width: 425px) {
+      bottom: 1rem;
+      // margin-top: -2rem;
+    }
   }
 }

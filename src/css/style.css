@@ -16,7 +16,7 @@ main {
 
 hr {
   -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -41,7 +41,7 @@ abbr[title] {
   text-decoration: underline;
   /* 2 */
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -116,9 +116,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   -webkit-appearance: button;
 }
 
@@ -126,9 +126,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -137,9 +137,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -158,7 +158,7 @@ fieldset {
  */
 legend {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -190,10 +190,10 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -202,8 +202,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -211,7 +211,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -221,7 +221,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -292,16 +292,14 @@ template {
   margin: 0;
   padding: 0;
 }
-*,
-*::after,
-*::before {
+*, *::after, *::before {
   -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 html {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
@@ -374,8 +372,8 @@ html {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: rgba(2, 255, 73, 0.5);
   padding: 1.6rem 3.2rem;
   z-index: 1;
@@ -383,8 +381,8 @@ html {
 @media (max-width: 768px) {
   .header {
     -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: end;
+        -ms-flex-pack: end;
+            justify-content: end;
     padding: 2rem 1.5rem;
   }
 }
@@ -403,8 +401,8 @@ html {
 }
 .header__nav {
   -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 @media (max-width: 768px) {
   .header__nav {
@@ -459,26 +457,9 @@ html {
   position: relative;
   min-height: 50.6rem;
   margin-bottom: 3.2rem;
-  background-image: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(rgba(2, 255, 73, 0)),
-      to(#02ff49)
-    ),
-    url("../../../img/first-display-bg.jpg");
-  background-image: -o-linear-gradient(
-      top,
-      rgba(2, 255, 73, 0) 0%,
-      #02ff49 100%
-    ),
-    url("../../../img/first-display-bg.jpg");
-  background-image: linear-gradient(
-      180deg,
-      rgba(2, 255, 73, 0) 0%,
-      #02ff49 100%
-    ),
-    url("../../../img/first-display-bg.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 255, 73, 0)), to(#02ff49)), url("../../../img/first-display-bg.jpg");
+  background-image: -o-linear-gradient(top, rgba(2, 255, 73, 0) 0%, #02ff49 100%), url("../../../img/first-display-bg.jpg");
+  background-image: linear-gradient(180deg, rgba(2, 255, 73, 0) 0%, #02ff49 100%), url("../../../img/first-display-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0rem 0rem 3.2rem 3.2rem;
@@ -504,11 +485,11 @@ html {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .first-display__img {
   margin: 11.2rem 0 3.2rem 0;
@@ -525,13 +506,7 @@ html {
   line-height: 4.8rem;
   font-weight: 700;
   text-align: center;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#00d8d8),
-    to(#02ff49)
-  );
+  background-image: -webkit-gradient(linear, left top, right top, from(#00d8d8), to(#02ff49));
   background-image: -o-linear-gradient(left, #00d8d8 0%, #02ff49 100%);
   background-image: linear-gradient(90deg, #00d8d8 0%, #02ff49 100%);
   color: transparent;
@@ -584,14 +559,14 @@ html {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0;
   }
 }
@@ -666,14 +641,14 @@ html {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 3.2rem;
 }
 @media (max-width: 895px) {
   .benefits__cards {
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 1rem;
   }
 }
@@ -738,13 +713,7 @@ html {
 .calc__about {
   position: relative;
   border-radius: 32px;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#00d8d8),
-    to(#02ff49)
-  );
+  background: -webkit-gradient(linear, left top, right top, from(#00d8d8), to(#02ff49));
   background: -o-linear-gradient(left, #00d8d8 0%, #02ff49 100%);
   background: linear-gradient(90deg, #00d8d8 0%, #02ff49 100%);
   padding: 3.2rem;
@@ -796,8 +765,8 @@ html {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 3.2rem;
 }
 @media (max-width: 1024px) {
@@ -813,17 +782,17 @@ html {
 @media (max-width: 965px) {
   .calculator-block {
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
 @media (max-width: 425px) {
   .calculator-block {
     -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 }
 
@@ -871,8 +840,8 @@ html {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .sum-input {
   margin-bottom: 1.6rem;
@@ -1017,14 +986,14 @@ input {
 }
 
 /* Убираем стандартные стрелки у input типа number */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
   /* Может потребоваться изменить, в зависимости от требуемого отступа */
 }
 
-input[type="number"] {
+input[type=number] {
   -moz-appearance: textfield;
   /* Для Firefox */
 }
@@ -1038,11 +1007,11 @@ input[type="number"] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 66%;
 }
 @media (max-width: 768px) {
@@ -1212,14 +1181,14 @@ input[type="number"] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .info__heading {
   margin-bottom: 1.6rem;
@@ -1237,20 +1206,20 @@ input[type="number"] {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   max-width: 100%;
 }
 @media (max-width: 768px) {
   .info__inner {
     gap: 2rem;
     -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
+        flex-wrap: nowrap;
     overflow-x: auto;
     gap: 2rem;
     /* Стилизация скроллбара для WebKit (Chrome, Safari) */
@@ -1278,30 +1247,30 @@ input[type="number"] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 30%;
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   margin-bottom: 5.6rem;
   background-color: #ffffff;
   border-radius: 3.2rem;
   padding: 4.8rem 3.2rem 3.2rem;
   -webkit-box-shadow: 0px 8px 0px 0px rgba(169, 150, 235, 0.15);
-  box-shadow: 0px 8px 0px 0px rgba(169, 150, 235, 0.15);
+          box-shadow: 0px 8px 0px 0px rgba(169, 150, 235, 0.15);
 }
-.info__card:nth-child(n + 4) {
+.info__card:nth-child(n+4) {
   margin-bottom: 0;
 }
 @media (max-width: 768px) {
   .info__card {
     max-width: 100%;
     -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
+        flex-basis: 100%;
     margin-top: 0.7rem;
     margin-bottom: 1.6rem;
   }
@@ -1323,14 +1292,14 @@ input[type="number"] {
   height: 5.2rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .info__card-heding {
   font-size: 2rem;
@@ -1374,11 +1343,11 @@ input[type="number"] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media (max-width: 1024px) {
   .faq__container {
@@ -1411,7 +1380,7 @@ input[type="number"] {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   margin-bottom: 3.2rem;
 }
 @media (max-width: 768px) {
@@ -1499,8 +1468,8 @@ input[type="number"] {
   -ms-grid-columns: 5.2rem 1fr;
   grid-template-columns: 5.2rem 1fr;
   -webkit-column-gap: 1.6rem;
-  -moz-column-gap: 1.6rem;
-  column-gap: 1.6rem;
+     -moz-column-gap: 1.6rem;
+          column-gap: 1.6rem;
   padding: 3.2rem;
   border-radius: 0rem 0rem 2.6rem 2.6rem;
 }
@@ -1581,12 +1550,12 @@ input[type="number"] {
 .tabs-container .tab-label:not(:last-child) {
   margin-right: 0.8rem;
 }
-.tabs-container input[type="radio"] {
+.tabs-container input[type=radio] {
   position: absolute;
   opacity: 0;
   pointer-events: none;
 }
-.tabs-container input[type="radio"]:checked + .tab-label {
+.tabs-container input[type=radio]:checked + .tab-label {
   background-color: #007f9b;
   /* Цвет фона выбранного таба */
 }
@@ -1606,7 +1575,8 @@ input[type="number"] {
 }
 @media (max-width: 768px) {
   .post-info {
-    margin-top: 7.5rem;
+    margin-top: 6.5rem;
+    min-height: 30rem;
   }
 }
 .post-info__item {
@@ -1643,15 +1613,14 @@ input[type="number"] {
   right: 4.2rem;
   bottom: 3.2rem;
 }
+@media (max-width: 425px) {
+  .post-info__link {
+    bottom: 1rem;
+  }
+}
 
 .footer {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#00d8d8),
-    to(#02ff49)
-  );
+  background: -webkit-gradient(linear, left top, right top, from(#00d8d8), to(#02ff49));
   background: -o-linear-gradient(left, #00d8d8 0%, #02ff49 100%);
   background: linear-gradient(90deg, #00d8d8 0%, #02ff49 100%);
   border-radius: 3.2rem 3.2rem 0rem 0rem;
@@ -1671,14 +1640,14 @@ input[type="number"] {
   .footer__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 .footer__nav {
@@ -1748,8 +1717,8 @@ input[type="number"] {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 @media (max-width: 768px) {
   .footer__action-img {
@@ -1779,18 +1748,18 @@ input[type="number"] {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media (max-width: 768px) {
   .copyright {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
   }
 }
@@ -1812,19 +1781,19 @@ input[type="number"] {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   list-style-type: none;
 }
 @media (max-width: 768px) {
   .copyright__nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
     margin-bottom: 2.5rem;
   }
@@ -1900,10 +1869,10 @@ input[type="number"] {
   position: relative;
   display: none;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-grid-column-align: end;
-  justify-self: end;
+      justify-self: end;
   top: 2.2rem;
   left: 1.5rem;
   width: 2rem;
@@ -1923,11 +1892,10 @@ input[type="number"] {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
-.burger-menu::before,
-.burger-menu::after {
+.burger-menu::before, .burger-menu::after {
   position: absolute;
   content: "";
   width: 100%;
@@ -1944,8 +1912,8 @@ input[type="number"] {
 .burger-menu.active span {
   background-color: #009b19;
   -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .burger-menu.active::before {
   display: none;
@@ -1953,7 +1921,7 @@ input[type="number"] {
 .burger-menu.active::after {
   background-color: #009b19;
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
   bottom: 40%;
 }
