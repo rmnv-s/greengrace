@@ -10,8 +10,9 @@
   padding: 1.6rem 3.2rem;
   z-index: 1;
 
-  @media (max-width: 425px) {
+  @media (max-width: 768px) {
     justify-content: end;
+    padding: 2rem 1.5rem;
   }
   &__logo {
     margin-right: 3.2rem;
@@ -19,14 +20,14 @@
       margin-right: 2rem;
     }
 
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
       display: none;
     }
   }
 
   &__nav {
     flex: 1 1 auto;
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
       display: none;
     }
 

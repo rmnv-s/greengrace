@@ -12,6 +12,10 @@
   }
 
   @media (max-width: 768px) {
+    gap: 1.6rem;
+  }
+
+  @media (max-width: 965px) {
     flex-wrap: wrap;
     flex-direction: column-reverse;
   }
@@ -25,10 +29,10 @@
   background-color: $color-white;
   padding: 3.2rem;
   border-radius: 3.2rem;
-  min-width: 44.8rem;
+  max-width: 33%;
 
-  @media (max-width: 768px) {
-    min-width: 38rem;
+  @media (max-width: 965px) {
+    max-width: 100%;
   }
 
   @media (max-width: 425px) {
@@ -45,6 +49,11 @@
   text-align: center;
   color: $color-text;
   margin-bottom: 3.2rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
 }
 
 .input-container {

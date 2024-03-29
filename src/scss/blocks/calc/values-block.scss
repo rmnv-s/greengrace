@@ -8,18 +8,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 66%;
+
+  &__subheading {
+    @media (max-width: 768px) {
+      margin-bottom: 1.6rem;
+    }
+  }
 
   @media (max-width: 1024px) {
     padding: 3.2rem 1rem;
   }
 
-  &__button {
+  @media (max-width: 965px) {
+    max-width: 100%;
   }
 
   &__note {
     color: $color-text-hover;
     text-align: center;
     margin-top: 1.6rem;
+  }
+  &__button {
+    margin-top: -0.5rem;
   }
 }
 
@@ -32,20 +43,40 @@
     gap: 1.6rem;
     text-align: center;
     list-style-type: none;
-    min-width: 86.4rem;
+    min-width: 76rem;
+
+    @media (max-width: 1280px) {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      min-width: 65rem;
+    }
+
+    @media (max-width: 1240px) {
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      min-width: 65rem;
+    }
+
+    @media (max-width: 1165px) {
+      grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+      min-width: 60rem;
+    }
+
+    @media (max-width: 1090px) {
+      grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+      min-width: 55rem;
+    }
 
     @media (max-width: 1024px) {
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      min-width: 49rem;
+      grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+      min-width: 50rem;
     }
 
     @media (max-width: 768px) {
       min-width: 68rem;
     }
 
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
       grid-template-columns: 1fr 1fr;
-      min-width: 35rem;
+      min-width: 28rem;
     }
 
     @media (max-width: 375px) {
@@ -53,21 +84,18 @@
       min-width: 24rem;
     }
 
-    & :first-child {
-      // margin-right: 1.6rem;
+    & :nth-child(3) {
+      @media (max-width: 768px) {
+        // outline: 1px solid tomato;
+        margin-top: 4rem;
+      }
     }
-
-    & :last-child {
-      // margin-left: 1.6rem;
+    & :nth-child(4) {
+      @media (max-width: 768px) {
+        // outline: 1px solid tomato;
+        margin-top: 4rem;
+      }
     }
-
-    & :nth-child(2) {
-      // margin: 0 1.6rem;
-    }
-  }
-
-  & :nth-child(3) {
-    // margin: 0 1.6rem;
   }
 
   & :not(:last-child) {
@@ -86,7 +114,7 @@
     }
   }
   & :nth-child(2)::before {
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
       // background-color: red;
       left: -183px;
       top: 92px;
@@ -94,9 +122,9 @@
       height: 2px;
     }
     @media (max-width: 390px) {
-      left: -160px;
+      left: -140px;
       top: 92px;
-      width: 300px;
+      width: 265px;
     }
 
     @media (max-width: 375px) {
@@ -117,6 +145,11 @@
     @include body-copy;
     color: $color-text;
     padding: 1.4rem 0;
+
+    @media (max-width: 768px) {
+      @include body-small;
+      padding: 0.5rem 0;
+    }
   }
 
   &__value {

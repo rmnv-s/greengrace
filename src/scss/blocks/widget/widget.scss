@@ -8,6 +8,10 @@
     padding: 3.2rem 2rem;
   }
 
+  @media (max-width: 768px) {
+    padding: 1.6rem 3.2rem;
+  }
+
   &__heading {
     font-size: 2.8rem;
     line-height: 3.4rem;
@@ -15,9 +19,9 @@
     text-align: center;
     color: $color-text;
 
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
       font-size: 1.6rem;
-      line-height: 2rem;
+      line-height: 2.4rem;
     }
   }
 
@@ -28,7 +32,7 @@
     text-align: center;
     color: $color-text;
 
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
       font-size: 1.2rem;
       line-height: 1.4rem;
     }

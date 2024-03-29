@@ -29,8 +29,8 @@
 
   &__subheading {
     margin-bottom: 3.2rem;
-    @media (max-width: 425px) {
-      margin-bottom: 2.4rem;
+    @media (max-width: 768px) {
+      margin-bottom: 1.4rem;
     }
   }
 
@@ -40,12 +40,16 @@
     justify-content: space-around;
     margin-bottom: 3.2rem;
 
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
       margin-bottom: 1.6rem;
     }
 
     & :not(:last-child) {
       margin-right: 3.2rem;
+
+      @media (max-width: 768px) {
+        margin-right: 1.6rem;
+      }
     }
 
     &-item {
@@ -54,6 +58,11 @@
       background-color: $color-white;
       padding: 2.4rem 3.2rem;
       border-radius: 1.6rem;
+
+      @media (max-width: 768px) {
+        font-size: 1.6rem;
+        line-height: 2rem;
+      }
     }
   }
 
@@ -61,7 +70,7 @@
     background-color: $color-learn;
 
     @media (max-width: 1024px) {
-      margin-top: 4rem;
+      margin-top: 1.6rem;
     }
   }
 }

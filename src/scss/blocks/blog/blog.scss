@@ -158,8 +158,8 @@
   padding: 3.2rem;
   margin-top: 6.2rem;
 
-  @media (max-width: 425px) {
-    margin-top: 7.5rem;
+  @media (max-width: 768px) {
+    margin-top: 6.5rem;
   }
 
   &__item {
@@ -172,14 +172,14 @@
     &:not(:last-child) {
       margin-bottom: 1.6rem;
     }
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
       @include body-small;
     }
 
     &-text {
       color: $color-text;
       max-width: 25.5rem;
-      @media (max-width: 425px) {
+      @media (max-width: 768px) {
         max-width: 100%;
       }
     }

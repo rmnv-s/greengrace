@@ -14,7 +14,7 @@
   &__subheading {
     margin-bottom: 4.8rem;
 
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
       margin-bottom: 2.4rem;
     }
   }
@@ -26,8 +26,9 @@
     flex-wrap: wrap;
     max-width: 100%;
 
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
       // outline: 1px solid tomato;
+      gap: 2rem;
       flex-wrap: nowrap;
       overflow-x: auto;
       gap: 2rem;
@@ -55,7 +56,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 42.6rem;
+    // max-width: 42.6rem;
+    max-width: 30%;
     flex: 0 0 auto;
     margin-bottom: 5.6rem;
 
@@ -66,20 +68,13 @@
 
     // убираем отступ снизу после последних 3х
     &:nth-child(n + 4) {
-      // margin-bottom: 0;
-    }
-
-    @media (max-width: 1024px) {
-      max-width: 47rem;
+      margin-bottom: 0;
     }
 
     @media (max-width: 768px) {
       max-width: 100%;
-    }
-
-    @media (max-width: 425px) {
       flex-basis: 100%;
-      margin-top: 2.3rem;
+      margin-top: 0.7rem;
       margin-bottom: 1.6rem;
     }
 
@@ -107,6 +102,11 @@
       @include heading-h4;
       color: $color-second;
       margin-bottom: 1.6rem;
+
+      @media (max-width: 768px) {
+        font-size: 1.6rem;
+        line-height: 2;
+      }
     }
 
     &-text {
@@ -115,12 +115,18 @@
       font-weight: 500;
       color: $color-text;
       text-align: center;
+
+      @media (max-width: 768px) {
+        @include body-small;
+      }
     }
   }
 
   &__button {
-    @media (max-width: 425px) {
-      margin-top: 4rem;
+    margin-top: 3.2rem;
+
+    @media (max-width: 768px) {
+      margin-top: 1.5rem;
     }
   }
 }

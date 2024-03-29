@@ -7,12 +7,43 @@
   background-color: $color-main;
   padding: 1.6rem 3.2rem;
   border-radius: 2.6rem;
+  text-decoration: none;
+  color: $color-white;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 700;
+  transition: all 0.4s ease;
 
-  &-link {
-    text-decoration: none;
-    color: $color-white;
+  &-main {
+    &:hover {
+      background-color: $color-main-hover;
+    }
+  }
+
+  &-linked {
+    position: relative;
     font-size: 1.6rem;
     line-height: 2rem;
     font-weight: 700;
+    color: $color-text;
+    text-decoration: none;
+    border-bottom: 0.2rem solid transparent;
+    transition: all 0.4s ease;
+
+    &:hover {
+      border-bottom: 0.2rem solid $color-text;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.2rem;
+      right: -1.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-image: url("../img/calc-about-arrow-right.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
   }
 }
