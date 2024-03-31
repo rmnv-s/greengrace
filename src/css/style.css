@@ -1249,11 +1249,16 @@ input[type=number] {
 }
 @media (max-width: 768px) {
   .info__card {
-    max-width: 100%;
+    max-width: 95%;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     margin-top: 0.7rem;
     margin-bottom: 1.6rem;
+  }
+}
+@media (max-width: 425px) {
+  .info__card {
+    max-width: 90%;
   }
 }
 .info__card-number {

@@ -74,10 +74,14 @@
     }
 
     @media (max-width: 768px) {
-      max-width: 100%;
+      max-width: 95%;
       flex-basis: 100%;
       margin-top: 0.7rem;
       margin-bottom: 1.6rem;
+    }
+
+    @media (max-width: 425px) {
+      max-width: 90%;
     }
 
     &-number {
