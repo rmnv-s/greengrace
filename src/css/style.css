@@ -716,7 +716,7 @@ html {
 }
 @media (max-width: 768px) {
   .calc__heading {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.6rem;
   }
 }
 .calc__about {
@@ -1049,64 +1049,17 @@ input[type=number] {
 
 .count {
   margin-bottom: 3.2rem;
+  width: 100%;
 }
 .count__summary {
+  position: relative;
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  -ms-grid-columns: (23.5%)[4];
+  grid-template-columns: repeat(4, 23.5%);
   gap: 1.6rem;
   text-align: center;
   list-style-type: none;
-  min-width: 76rem;
-}
-@media (max-width: 1280px) {
-  .count__summary {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    min-width: 65rem;
-  }
-}
-@media (max-width: 1240px) {
-  .count__summary {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    min-width: 65rem;
-  }
-}
-@media (max-width: 1165px) {
-  .count__summary {
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-    min-width: 60rem;
-  }
-}
-@media (max-width: 1090px) {
-  .count__summary {
-    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
-    min-width: 55rem;
-  }
-}
-@media (max-width: 1024px) {
-  .count__summary {
-    grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
-    min-width: 50rem;
-  }
-}
-@media (max-width: 768px) {
-  .count__summary {
-    min-width: 68rem;
-  }
-}
-@media (max-width: 768px) {
-  .count__summary {
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    min-width: 28rem;
-  }
-}
-@media (max-width: 375px) {
-  .count__summary {
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    min-width: 24rem;
-  }
 }
 @media (max-width: 768px) {
   .count__summary :nth-child(3) {
@@ -1116,6 +1069,44 @@ input[type=number] {
 @media (max-width: 768px) {
   .count__summary :nth-child(4) {
     margin-top: 4rem;
+  }
+}
+@media (max-width: 768px) {
+  .count__summary {
+    -ms-grid-columns: (25%)[2];
+    grid-template-columns: repeat(2, 25%);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (max-width: 425px) {
+  .count__summary {
+    -ms-grid-columns: (50%)[2];
+    grid-template-columns: repeat(2, 50%);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .count__summary::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 50%;
+    height: 0.2rem;
+    background-color: #00d8d8;
+    border-radius: 0.2rem;
+  }
+}
+@media (max-width: 425px) {
+  .count__summary::before {
+    width: 100%;
   }
 }
 .count :not(:last-child) {
@@ -1133,31 +1124,7 @@ input[type=number] {
 }
 @media (max-width: 768px) {
   .count :nth-child(2)::before {
-    left: -183px;
-    top: 92px;
-    width: 350px;
-    height: 2px;
-  }
-}
-@media (max-width: 390px) {
-  .count :nth-child(2)::before {
-    left: -140px;
-    top: 92px;
-    width: 265px;
-  }
-}
-@media (max-width: 375px) {
-  .count :nth-child(2)::before {
-    left: -152px;
-    top: 92px;
-    width: 290px;
-  }
-}
-@media (max-width: 320px) {
-  .count :nth-child(2)::before {
-    left: -133px;
-    top: 92px;
-    width: 250px;
+    display: none;
   }
 }
 .count__item {
@@ -1202,6 +1169,11 @@ input[type=number] {
 .info__heading {
   margin-bottom: 1.6rem;
 }
+@media (max-width: 768px) {
+  .info__heading {
+    margin-bottom: 0.8rem;
+  }
+}
 .info__subheading {
   margin-bottom: 4.8rem;
 }
@@ -1230,7 +1202,7 @@ input[type=number] {
         flex-wrap: nowrap;
     overflow-x: auto;
     gap: 2rem;
-    min-height: 26rem;
+    padding-top: 1.6rem;
     /* Стилизация скроллбара для WebKit (Chrome, Safari) */
   }
   .info__inner::-webkit-scrollbar {
@@ -1342,7 +1314,7 @@ input[type=number] {
 }
 @media (max-width: 768px) {
   .info__button {
-    margin-top: 1.5rem;
+    margin-top: 1.6rem;
   }
 }
 
@@ -1373,6 +1345,9 @@ input[type=number] {
 .faq__container::-webkit-scrollbar-track {
   background-color: #ffffff;
   border-radius: 0.8rem;
+}
+.faq__heading {
+  margin-bottom: 1.6rem;
 }
 .faq__subheading {
   margin-bottom: 3.2rem;
@@ -1923,7 +1898,7 @@ input[type=number] {
   top: 2.2rem;
   left: 1.5rem;
   width: 2rem;
-  height: 1.5rem;
+  height: 1.6rem;
   cursor: pointer;
   z-index: 10;
 }

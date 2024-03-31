@@ -36,57 +36,18 @@
 
 .count {
   margin-bottom: 3.2rem;
+  width: 100%;
 
   &__summary {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 23.5%);
     gap: 1.6rem;
     text-align: center;
     list-style-type: none;
-    min-width: 76rem;
-
-    @media (max-width: 1280px) {
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      min-width: 65rem;
-    }
-
-    @media (max-width: 1240px) {
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      min-width: 65rem;
-    }
-
-    @media (max-width: 1165px) {
-      grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-      min-width: 60rem;
-    }
-
-    @media (max-width: 1090px) {
-      grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
-      min-width: 55rem;
-    }
-
-    @media (max-width: 1024px) {
-      grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
-      min-width: 50rem;
-    }
-
-    @media (max-width: 768px) {
-      min-width: 68rem;
-    }
-
-    @media (max-width: 768px) {
-      grid-template-columns: 1fr 1fr;
-      min-width: 28rem;
-    }
-
-    @media (max-width: 375px) {
-      grid-template-columns: 1fr 1fr;
-      min-width: 24rem;
-    }
 
     & :nth-child(3) {
       @media (max-width: 768px) {
-        // outline: 1px solid tomato;
         margin-top: 4rem;
       }
     }
@@ -94,6 +55,35 @@
       @media (max-width: 768px) {
         // outline: 1px solid tomato;
         margin-top: 4rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 25%);
+      justify-content: center;
+    }
+
+    @media (max-width: 425px) {
+      grid-template-columns: repeat(2, 50%);
+      justify-content: center;
+    }
+
+    &::before {
+      @media (max-width: 768px) {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 50%;
+        height: 0.2rem;
+        background-color: $color-main;
+        border-radius: 0.2rem;
+      }
+
+      @media (max-width: 425px) {
+        width: 100%;
       }
     }
   }
@@ -115,33 +105,32 @@
   }
   & :nth-child(2)::before {
     @media (max-width: 768px) {
-      // background-color: red;
-      left: -183px;
-      top: 92px;
-      width: 350px;
-      height: 2px;
+      // left: -183px;
+      // top: 92px;
+      // width: 250%;
+      // height: 2px;
+      display: none;
     }
-    @media (max-width: 390px) {
-      left: -140px;
-      top: 92px;
-      width: 265px;
-    }
-
-    @media (max-width: 375px) {
-      left: -152px;
-      top: 92px;
-      width: 290px;
-    }
-
-    @media (max-width: 320px) {
-      left: -133px;
-      top: 92px;
-      width: 250px;
-    }
+    //     @media (max-width: 390px) {
+    //       left: -140px;
+    //       top: 92px;
+    //       width: 265px;
+    //     }
+    //
+    //     @media (max-width: 375px) {
+    //       left: -152px;
+    //       top: 92px;
+    //       width: 290px;
+    //     }
+    //
+    //     @media (max-width: 320px) {
+    //       left: -133px;
+    //       top: 92px;
+    //       width: 250px;
+    //     }
   }
 
   &__item {
-    // min-width: 19.5rem;
     @include body-copy;
     color: $color-text;
     padding: 1.4rem 0;

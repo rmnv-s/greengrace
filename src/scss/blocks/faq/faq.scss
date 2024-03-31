@@ -26,6 +26,10 @@
     }
   }
 
+  &__heading {
+    margin-bottom: 1.6rem;
+  }
+
   &__subheading {
     margin-bottom: 3.2rem;
     @media (max-width: 768px) {

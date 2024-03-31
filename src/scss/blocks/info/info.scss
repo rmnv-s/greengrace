@@ -9,6 +9,10 @@
 
   &__heading {
     margin-bottom: 1.6rem;
+
+    @media (max-width: 768px) {
+      margin-bottom: 0.8rem;
+    }
   }
 
   &__subheading {
@@ -30,7 +34,7 @@
       flex-wrap: nowrap;
       overflow-x: auto;
       gap: 2rem;
-      min-height: 26rem;
+      padding-top: 1.6rem;
       /* Стилизация скроллбара для WebKit (Chrome, Safari) */
       &::-webkit-scrollbar {
         // width: 0.3rem; /* Ширина скроллбара */
@@ -124,7 +128,7 @@
     margin-top: 3.2rem;
 
     @media (max-width: 768px) {
-      margin-top: 1.5rem;
+      margin-top: 1.6rem;
     }
   }
 }

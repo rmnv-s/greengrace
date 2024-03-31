@@ -142,4 +142,3 @@ headings.forEach((heading) => {
     }
   });
 });
-post - info__item - text;
