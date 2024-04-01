@@ -9,12 +9,9 @@
   }
 
   &__container {
-    // display: flex;
-    // justify-content: space-between;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3.2rem;
-    // flex-wrap: wrap;
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
@@ -24,7 +21,6 @@
 
 .news {
   position: relative;
-  // max-width: 68.8rem;
   border-radius: 2.6rem;
   background-color: $color-white;
 
@@ -50,7 +46,6 @@
   &__content {
     display: grid;
     grid-template-columns: 5.2rem 1fr;
-    // grid-template-rows: 5.2rem 1fr;
     column-gap: 1.6rem;
     padding: 3.2rem;
 
@@ -95,12 +90,11 @@
   display: block;
   list-style-type: none;
   margin-bottom: 3.2rem;
-  // outline: 1px solid blue;
-  white-space: nowrap; /* Предотвращает перенос текста на новую строку */
-  overflow-x: auto; /* Добавляет горизонтальную прокрутку при необходимости */
+  white-space: nowrap;
+  overflow-x: auto;
   max-width: 100%;
 
-  padding: 10px 0 2.6rem 0;
+  padding: 10px 0 1.6rem 0;
   z-index: 1;
 
   &::-webkit-scrollbar {
@@ -139,15 +133,13 @@
   }
 
   input[type="radio"]:checked + .tab-label {
-    background-color: $color-blog; /* Цвет фона выбранного таба */
+    background-color: $color-blog;
   }
 }
 
 .blog__post-info {
-  // max-width: 68.8rem;
   position: relative;
   overflow: hidden;
-  // outline: 1px solid tomato;
 }
 
 .post-info {
@@ -163,12 +155,7 @@
     min-height: 30rem;
   }
 
-  @media (max-width: 425px) {
-    // min-height: 35rem;
-  }
-
   &__item {
-    // outline: 1px solid tomato;
     @include body-copy;
     color: $color-text-hover;
     display: grid;
@@ -198,7 +185,6 @@
 
     @media (max-width: 425px) {
       bottom: 1rem;
-      // margin-top: -2rem;
     }
   }
 }
